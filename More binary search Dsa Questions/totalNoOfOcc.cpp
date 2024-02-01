@@ -1,7 +1,8 @@
-// Find first and last  occurence of an element in an array.
+// to no of occurence
+// formula => (last index - first index )+1
 
 #include<iostream>
-#include<vector>
+#include <vector>
 using namespace std;
 
 int firstOcc(vector<int> arr, int size, int key){
@@ -28,7 +29,7 @@ e = mid -1;
 return ans;
 }
 
-int LastOcc(vector<int> arr, int size, int key){
+int lastOcc(vector<int> arr, int size, int key){
 
 int s =0,e = size-1;
 int mid = s+ (e-s)/2;
@@ -54,9 +55,11 @@ return ans;
 
 int main()
 {
-vector<int> arr = {1,2,3,3,3,4,4,5,5};
+    int key;
+    vector<int> arr={1,1,2,3,3,3,3,3,3,3,4,4,5,6,6};
+    cout<<"enter the value of key :";
+    cin>>key;
+cout<<"total occurence of "<<key<< " is :"<<(lastOcc(arr,arr.size(),key)-firstOcc(arr,arr.size(),key))+1;
 
-cout<<"First occurence of 3 is :"<<firstOcc(arr,arr.size(),5)<<endl;
-cout<<"Last occurence of 3 is :"<<LastOcc(arr,arr.size(),5)<<endl;
 return 0;
-}
+} 
