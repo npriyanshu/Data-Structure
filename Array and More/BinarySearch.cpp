@@ -5,7 +5,7 @@ int BinarySearch(int arr[],int size,int key){
 
     while (start<=end)
 {
-  mid = (start + end)/2;
+  mid = start + (end - start)/2;
 
 if(arr[mid]==key){
     return mid;
@@ -37,3 +37,10 @@ cout<<"element is not in the array";
 }
 
 
+// as we know int can store max upto 2^31-1 but what if both start and end are ints max value 
+// then summing them up can give us a value that cannot be stored in an integer resulting in error 
+
+// to solve this we will change formula to calculate mid slightly :
+// from:--> mid = (start +end) /2
+
+// to:--> mid = start + (end - start)/2
