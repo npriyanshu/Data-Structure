@@ -3,16 +3,15 @@
 // output = sqrt of no
 
 #include<iostream>
-#include<vector>
 using namespace std;
 
-int getSqrt(vector<int> arr,int num){
-int s = 0,e = arr.size()-1;
-int ans;
+int getSqrt(int num){
+int s = 0,e = num;
+int ans= -1;
 while(s<=e){
 int mid = s + (e-s)/2;
     if((mid * mid)== num){
-        return ans = mid;
+        return mid;
     }
     else if((mid * mid)>num){
         e = mid -1;
@@ -27,15 +26,11 @@ return ans;
 
 int main()
 {
-vector<int> arr;
+    
 int num;
 cout<<"enter the number :";
 cin>>num;
-for(int i=0;i<num;i++){
-arr.push_back(i+1);
-}
-
-cout<<"ans is :"<<getSqrt(arr,num);
+cout<<"ans is :"<<getSqrt(num);
 
 return 0;
 }
