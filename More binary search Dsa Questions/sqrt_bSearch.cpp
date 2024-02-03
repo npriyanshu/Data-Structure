@@ -5,7 +5,7 @@
 #include<iostream>
 using namespace std;
 
-long long int getSqrt(int num){
+long long int getSqrtInt(int num){
 int s = 0,e = num;
 long long int ans= -1;
 while(s<=e){
@@ -24,13 +24,27 @@ long long int mid = s + (e-s)/2;
 return ans;
 }
 
+double morePrecision(int n,int precision, int tempSol){
+double factor = 1;
+double ans = tempSol;
+for(int i=0; i<precision;i++){
+    factor = factor/10;
+    for(double j=ans;j*j<n;j=j+factor)
+    {
+        ans = j;
+    }
+}
+return ans;
+}
+
 int main()
 {
 
 int num;
 cout<<"enter the number :";
 cin>>num;
-cout<<"ans is :"<<getSqrt(num);
+int tempSol = getSqrtInt(num);
+cout<<"ans is :"<<morePrecision(num,3,tempSol);
 
 return 0;
 }
