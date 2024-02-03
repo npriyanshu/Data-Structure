@@ -5,11 +5,11 @@
 #include<iostream>
 using namespace std;
 
-int getSqrt(int num){
+long long int getSqrt(int num){
 int s = 0,e = num;
-int ans= -1;
+long long int ans= -1;
 while(s<=e){
-int mid = s + (e-s)/2;
+long long int mid = s + (e-s)/2;
     if((mid * mid)== num){
         return mid;
     }
@@ -26,7 +26,7 @@ return ans;
 
 int main()
 {
-    
+
 int num;
 cout<<"enter the number :";
 cin>>num;
