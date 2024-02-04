@@ -15,7 +15,7 @@ for (int i=0;i<n;i++){
         if(studentCount>m || arr[i]> mid){
             return false;
         }
-        pageSum +=arr[i];
+        pageSum = arr[i];
     }
 }
 return true;
