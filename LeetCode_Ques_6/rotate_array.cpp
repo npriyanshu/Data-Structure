@@ -1,3 +1,4 @@
+// shift the elements of the array by the give if its out of bound then shift from arrays start
 #include<iostream>
 #include<vector>
 using namespace std;
