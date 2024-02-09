@@ -14,15 +14,17 @@ int main()
 {
 
 // initialize character array 
-char ch[10];
+char ch[20];
 
 // taking inputs in char array
 cout<<" enter ur name :";
-cin>>ch;
+// cin>>ch;
+cin.getline(ch,20);
+cout<<ch<<endl;
 //  null character eg
+
 ch[2] = '\0';
 // now it will only print up to 1 index
-cout<<ch;
 
 // if i gave my name of only 9 chars
 // the 10 value would be a null character (ascii) value
@@ -32,6 +34,13 @@ cout<<ch;
 // cin stops the execution whenever we give - space " ",tab \t,newline /enter 
 
 cout<<"length :"<<getLength(ch);
+
+// to get the the in put from cin 
+// even if we have " " in it we use 
+// cin.getline method
+
+
+
 
 return 0;
 }
