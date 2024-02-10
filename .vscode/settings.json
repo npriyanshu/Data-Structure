@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "*.sol": "sql",
+        "*.tsx": "typescriptreact",
+        "vector": "cpp",
+        "iostream": "cpp"
+    }
+}
