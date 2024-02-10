@@ -15,5 +15,16 @@ for(int i =0;i<3;i++)
     cout<<" sum of the "<<i+1<<"st row :"<<sum<<endl;
 }
 
+// print sum of each column
+
+for(int i =0;i<2;i++)
+{
+    int sum =0;
+    for(int j =0;j<3;j++){
+    sum += arr[j][i];
+    }
+    cout<<" sum of the "<<i+1<<"st column :"<<sum<<endl;
+}
+
 return 0;
 }
