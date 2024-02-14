@@ -22,4 +22,4 @@ int *p = &arr[0];
 cout<<sizeof(arr)<<endl<<sizeof(p);
 
 return 0;
-}
+}   
