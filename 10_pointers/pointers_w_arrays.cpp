@@ -15,5 +15,11 @@ cout<<*(arr+1)<<endl; // <--value at arr[1]
 cout<<*(arr)+1<<endl; // <--value at arr[0]+1
 cout<<*(arr+2)<<endl; // <--value at arr[2]
 
+// using index + [arr]
+cout<<1[arr]<<endl; // <--value at arr[1]
+
+int *p = &arr[0];
+cout<<sizeof(arr)<<endl<<sizeof(p);
+
 return 0;
 }
