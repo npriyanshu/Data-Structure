@@ -16,8 +16,8 @@ cout<<**ptr<<endl;
 cout<<p<<endl;
 cout<<"afer"<<endl;
 update(ptr);
-cout<<**ptr<<endl;
-cout<<p<<endl;
+cout<<*ptr[0]<<endl;
+cout<<p[0]<<endl;
 
 
 return 0;
