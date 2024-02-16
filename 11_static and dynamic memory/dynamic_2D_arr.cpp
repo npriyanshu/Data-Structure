@@ -11,8 +11,11 @@ int main()
     // we can take each pointer as row here 
 
     // we use double pointer to point each row in heap
-int n;
+int n,m;
+cout<<"enter no of rows :";
 cin>>n;
+cout<<"enter no of col :";
+cin>>m;
 // n is the no of rows or addresses
 int **arr = new int*[n];
 
