@@ -8,6 +8,7 @@ int main()
     // we use pointer to point to memory blocks in heap
     // eg : int *p = new int[size];
 
+
     // we can take each pointer as row here 
 
     // we use double pointer to point each row in heap
@@ -32,7 +33,7 @@ for(int i=0;i<n;i++){
 
 cout<<"enter the value of elemnts"<<endl;
 for(int i = 0; i<n; i++){
-    for(int j = 0;j<n;j++){
+    for(int j = 0;j<m;j++){
         cin>>arr[i][j];
     }
 }
@@ -41,12 +42,16 @@ cout<<endl;
 // printing the values
 
 for(int i = 0; i<n; i++){
-    for(int j = 0;j<n;j++){
+    for(int j = 0;j<m;j++){
         cout<<arr[i][j]<<" ";
     }
 }
 
-
+// memory cleanup
+    for(int i = 0; i < n; i++){
+        delete[] arr[i];
+    }
+    delete[] arr;
 
 
 return 0;
