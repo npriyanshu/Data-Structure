@@ -14,8 +14,11 @@ bool isSorted (int arr[],int size){
 }
 int main()
 {
-int arr[] = {1,2,4,5,6,8,9};
-cout << "Is the array sorted? :"<<isSorted(arr,7)<<endl; // Output: Is the array sorted?:1
+int arr[] = {1,2,4,5,6,8,2};
+
+string Sorted = isSorted(arr,7) == 1 ? "Array is Sorted " : "Array is not Sorted";
+
+cout<<Sorted;
 
 
 return 0;
