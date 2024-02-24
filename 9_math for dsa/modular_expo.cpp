@@ -2,7 +2,6 @@
 //  modulo operator
 
 #include<iostream>
-#include<vector>
 using namespace std;
 int modularExponentiation(int x, int n, int m) {
 	// Write your code here.
