@@ -1,21 +1,24 @@
 #include<iostream>
 using namespace std;
-void reverse(string &s,int f ,int b){
+// reversing  a string using a single pointer.
+void reverse(string &s,int f){
     cout<<" calling reverse :"<<s<<endl;
-if(f>b) {
+if(f>((s.length()-f)-1)) {
     return;
 }
-swap(s[f],s[b]);
+cout<<" f :"<<f<<" b :"<<(s.length()-f)-1<<endl;
+swap(s[f],s[(s.length()-f)-1]);
 
-reverse(s,f+1,b-1);
+reverse(s,f+1);
 
 }
 int main()
 {
 
  int v[] = {2,4,5};   
-string s = "whatfuck";
-reverse(s,0,s.length()-1);
+string s = "goodisbad";
+
+reverse(s,0);
 cout<<s<<endl;
 
 
