@@ -1,6 +1,7 @@
 #include<iostream>
 using namespace std;
 void reverse(string &s,int f ,int b){
+    cout<<" calling reverse :"<<s<<endl;
 if(f>b) {
     return;
 }
