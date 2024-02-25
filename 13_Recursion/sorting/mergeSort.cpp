@@ -7,9 +7,14 @@ void merge(int *arr, int s , int e){
 
 // length of first array
    int len1 = (mid - s) +1;
+//    printf(" len1 :%d, mid: %d, e: %d, s:%d",len1, mid, e ,s );
+//    cout<<endl;
 
 // length of second array
    int len2 = e - mid;
+//    printf(" len2 :%d, mid: %d, e: %d, s:%d",len2, mid, e ,s );
+//    cout<<endl;
+//    cout<<endl;
 
    //make both arrays
    int *first = new int[len1];
@@ -75,14 +80,13 @@ mergeSort(arr,mid+1,e);
 //  merge
 merge(arr,s,e);
 
-
-
 }
+
 int main()
 {
  
- int arr[5] = {52,53,37,48,92};
- int n = 5;
+ int arr[] = {43, 12, 56, 78, 29, 5, 91, 18, 67, 38, 83, 50, 14, 72, 27, 61, 9, 34, 75, 22, 48, 65, 7, 89, 42, 19, 54, 81, 36, 93, 11, 69, 31, 76, 24, 59, 3, 97, 46, 1, 63, 88, 15, 78, 33, 71, 8, 51, 28, 94, 21, 44, 66, 13, 79, 39, 84, 53, 16, 74, 32, 67, 77, 2, 68, 37, 82, 55, 23, 49, 86, 17, 64, 91, 6, 29, 47, 12, 57, 85, 4, 99, 58, 26, 73, 41, 96, 20, 52, 87, 35, 62, 98, 10, 45, 69};
+ int n = 96;
 mergeSort(arr,0,n-1);
 
 for (int i = 0; i < n; i++)
