@@ -12,7 +12,7 @@ int main()
     cout<<" address of ptr (&ptr) :"<<&ptr<<endl;
     cout<<" value at ptr (ptr) :"<<ptr<<endl;
     cout<<" value of address at ptr (*ptr) :"<<*ptr<<endl;
-    cout<<"(**ptr) :"<<*ptr<<endl;
+    cout<<"(**ptr) :"<<**ptr<<endl;
   
     cout<<" address of p (&p) :"<<&p<<endl;
     cout<<" value at p (p) :"<<p<<endl;
