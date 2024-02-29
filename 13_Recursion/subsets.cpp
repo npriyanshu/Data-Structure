@@ -13,6 +13,7 @@ void solve(vector<int> nums, vector<int> output, int index, vector<vector<int>> 
 
     // exclude
     solve(nums,output,index+1,ans); 
+    
 
     // include
     int element = nums[index];
@@ -32,7 +33,13 @@ vector<vector<int>> subsets(vector<int>& nums){
 
 int main()
 {
-
-
+vector<int>  vect={1,2,3};
+vector<vector<int>> ans =  subsets(vect);
+for (auto i: ans) {
+	for (auto j :i ) {
+    	cout <<j<<" ";
+	}
+	cout<<endl;
+}
 return 0;
 }
