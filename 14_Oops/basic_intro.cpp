@@ -1,4 +1,6 @@
 #include<iostream>
+// we can also import or include class from different file
+#include "Hero.cpp";
 using namespace std;
 
 // creating a class
@@ -53,7 +55,10 @@ cout<<"Value : "<<b->getVal()<<endl;
 delete b; // deleting dynamically allocated memory
 
 
-
+// included class object
+Hero h;
+h.health = 53;
+cout<<"hero's health is "<<h.health<<endl;
 
 
 return 0;
