@@ -18,7 +18,7 @@ Node* next;
         if(this->next!=NULL){
             delete next;
             this->next = NULL;
-        };
+        };  
         cout<<" memory released for data "<<value<<endl;
     }
 };
