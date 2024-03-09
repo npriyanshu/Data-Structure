@@ -25,10 +25,12 @@ Node* next;
 
 // insertion at head
 void InsertAtHead(Node* &head, int d){
-    // new node create
+
+     // new node create
     Node* temp = new Node(d);
     temp->next= head;
     head = temp;
+  
 }
 
 // insertion at tail

@@ -2,6 +2,7 @@
     "files.associations": {
         "*.sol": "sql",
         "*.tsx": "typescriptreact",
-        "new": "cpp"
+        "new": "cpp",
+        "iostream": "cpp"
     }
 }
