@@ -1,6 +1,6 @@
 #include<iostream>
 // we can also import or include class from different file
-#include "Hero.cpp";
+#include "Hero.cpp"
 using namespace std;
 
 // creating a class
