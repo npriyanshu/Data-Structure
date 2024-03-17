@@ -26,7 +26,7 @@ Node* next;
         if(this->next!=NULL){
             delete next;
             this->next = NULL;
-        };  
+        }
         cout<<" memory released for data "<<value<<endl;
     }
 
@@ -75,5 +75,17 @@ temp = temp->next;
  }
  cout<<endl;
  
+}
+
+int getLength(Node *head) {
+Node* temp = head;
+int len = 0;
+ while (temp != NULL)
+ {
+      len++;
+// temp ko aage badhao
+temp = temp->next;
+ }
+ return len;
 }
 };

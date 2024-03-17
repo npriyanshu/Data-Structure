@@ -24,6 +24,18 @@ public:
         cout << " memory released for data " << value << endl;
     }
 
+int getLength(Node *head) {
+Node* temp = head->next;
+int len = 0;
+ while (temp != head)
+ {
+      len++;
+// temp ko aage badhao
+temp = temp->next;
+ }
+ return len;
+}   
+
     
 void InsertNode(Node *&tail, int element, int d)
 {
