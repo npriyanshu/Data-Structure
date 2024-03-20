@@ -38,7 +38,16 @@ Node* next;
     head = temp;
   
 }
-void InsertAtTail(Node* &tail, int d){
+void InsertAtTail(Node* &tail, Node* &head, int d){
+
+    if(tail==NULL){
+    Node* temp = new Node(d);
+    temp->next = tail;
+    tail = temp;
+    head = temp;
+   return;
+    }
+
     Node* temp = new Node(d);
     tail->next= temp;
     tail = temp;
@@ -56,7 +65,7 @@ void InsertAtPosition(Node* &head,Node* &tail,int position,int d){
         cnt++;
     }
 if(temp->next==NULL){
-InsertAtTail(tail,d);
+InsertAtTail(tail,head,d);
 return;
 }
 
