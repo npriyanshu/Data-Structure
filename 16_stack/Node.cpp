@@ -65,6 +65,55 @@ return;
 
 }
 
+// delete at position
+void deleteNode(int position,Node* &head,Node* &tail){
+    if(head == NULL || position < 1)    
+       return;        
+    // deleting first node
+      if(position == 1){
+Node* temp = head;
+head = head->next;
+
+temp->next = NULL;
+delete temp;
+    }
+      else{
+        // deleting any middle or last node
+     Node* curr = head;
+     Node* prev = NULL;
+    // to count position
+    int cnt = 1;
+    while(cnt<position){
+       prev = curr;
+       curr = curr->next;
+        cnt++;
+    }
+
+    prev->next = curr->next;
+    if(prev->next == NULL){
+        tail = prev;
+    }
+    
+    curr->next= NULL;
+        delete curr;
+      }    
+
+}
+
+int getLength(Node *head) {
+Node* temp = head;
+int len = 0;
+ while (temp != NULL)
+ {
+      len++;
+// temp ko aage badhao
+temp = temp->next;
+ }
+ return len;
+}
+
+
+
 void  printList(Node* &head){
  Node* temp = head;
  while (temp != NULL)
@@ -75,4 +124,6 @@ temp = temp->next;
  cout<<endl;
  
 }
+
+
 };

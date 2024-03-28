@@ -83,6 +83,8 @@ temp = temp->next;
 
 // delete at position
 void deleteNode(int position,Node* &head,Node* &tail){
+    if(head == NULL || position < 1)    
+       return;        
     // deleting first node
       if(position == 1){
 Node* temp = head;
@@ -152,7 +154,16 @@ deleteNode(10,head,tail);
 printList(head);
 cout<<endl<<tail->data<<endl;
 
-
+deleteNode(1,head,tail);
+deleteNode(1,head,tail);
+deleteNode(1,head,tail);
+deleteNode(1,head,tail);
+deleteNode(1,head,tail);
+deleteNode(1,head,tail);
+deleteNode(1,head,tail);
+deleteNode(1,head,tail);
+deleteNode(1,head,tail);
+deleteNode(1,head,tail);
 // print all elements
 printList(head);
 
