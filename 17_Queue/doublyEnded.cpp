@@ -21,37 +21,34 @@ public:
     }
 
     // Pushes 'X' in the front of the deque. Returns true if it gets pushed into the deque, and false otherwise.
-    bool pushFront(int x)
-    {
-        // Check Full.
-        if ((front == 0 && rear == size - 1) ||
-            rear == (front - 1) % (size - 1)) {
-          return false;
-        }
-        else if(front == -1){
-            // first push
-            front = rear = 0;
-        }
-        else if(front == 0 && rear != size-1){
-            front = size -1;
-        }
-        else{
-            front--;
-        }
-        arr[front] = x;
-        return true;
 
+    bool pushFront(int x)
+{
+    if (isFull()) {
+        return false;
     }
+    else if (front == -1) {
+        // first push
+        front = rear = 0;
+    }
+    else if (front == 0 && rear != size - 1) {
+        front = size - 1;
+    }
+    else {
+        front--;
+    }
+    arr[front] = x;
+    return true;
+}
 
     // Pushes 'X' in the back of the deque. Returns true if it gets pushed into the deque, and false otherwise.
     bool pushRear(int x)
     {
         // Write your code here.
-        if((front == 0 && rear == size - 1) ||
-            rear == (front - 1) % (size - 1)){
+        if(isFull()){
 return false;
         }
-        if(front == 1){
+        if(rear == -1){
             front = rear = 0;
         }
         // maintaining cyclic nature
@@ -68,7 +65,7 @@ return false;
     // Pops an element from the front of the deque. Returns -1 if the deque is empty, otherwise returns the popped element.
     int popFront()
     {
-      if(front == -1){
+      if(isEmpty()){
             return -1;
         }
 
@@ -148,10 +145,10 @@ return false;
         // Write your code here.
         if((front == 0 && rear == size - 1) ||
             ( front != 0 && rear == (front - 1) % (size - 1))){
-return false;
+return true;
         }
         else{
-            return true;
+            return false;
         }
     }
 };
@@ -160,6 +157,7 @@ return false;
 
 int main()
 {
+    /*
 // implementing doubly ended queue with stl
 deque <int> d; // creating a deque of integers
 
@@ -172,6 +170,9 @@ cout<<d.back()<<endl;
 
 d.pop_front();
 cout<<d.front()<<endl;
+*/
+Deque q(5);
+cout<<q.isFull()<<endl;
  
  
 return 0;
