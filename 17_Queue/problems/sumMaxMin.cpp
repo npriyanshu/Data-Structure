@@ -17,13 +17,13 @@ for(int i = 0; i<k; i++){
     maxi.push_back(i);
     mini.push_back(i);
 }
-
+cout<<" max , mini "<<arr[maxi.front()]<<" , "<<arr[mini.front()]<<endl;
 int ans = 0;
 ans += arr[maxi.front()] + arr[mini.front()];
 
 // remaining windows ko process karo
 for(int i = k; i<n; i++){
-    ans += arr[maxi.front()] + arr[mini.front()];
+    // ans += arr[maxi.front()] + arr[mini.front()];
 
     // next window
 
@@ -46,6 +46,7 @@ for(int i = k; i<n; i++){
     maxi.push_back(i);
     mini.push_back(i);
 
+cout<<" max , mini "<<arr[maxi.front()]<<" , "<<arr[mini.front()]<<endl;
     ans += arr[maxi.front()] + arr[mini.front()];
 }
 
