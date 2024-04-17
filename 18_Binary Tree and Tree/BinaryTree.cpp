@@ -279,6 +279,46 @@ curr = curr->right;
 }
 
 
+node* findPred(node* curr){
+    node* n = curr;
+    n = n->left;
+    while(n->right !=NULL && n->right != curr){
+        n = n->right;
+    }
+    return n;
+}
+
+void morrisTrev(node* root){
+
+node* current = root;
+
+while(current !=NULL){
+    // if left not exists visit current
+    if(!current->left){
+        cout<<current->data<<" ";
+        current = current->right;
+    }
+    else{
+        node* pred = findPred(current);
+        if(pred->right == NULL){
+            pred->right = current;
+            current = current->left;
+        }
+       else{
+        pred->right = NULL;
+        cout<<current->data<<" ";
+        current = current->right;
+       }
+    }
+}
+
+
+}
+
+
+
+
+
 
 int main()
 {
@@ -306,6 +346,9 @@ int main()
 
     // iterativePostOrder(root);
     IterativeInOrder(root);
+    cout<<"\n morris treversal "<<endl;
+    morrisTrev(root);
+
 
     return 0;
 }
