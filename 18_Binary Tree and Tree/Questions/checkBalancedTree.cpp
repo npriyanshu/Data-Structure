@@ -101,6 +101,7 @@ struct Node
 };
  */
 
+// *************** O(n2) solution **************************
 class Solution{
     public:
     
@@ -143,6 +144,56 @@ class Solution{
     }
 };
 
+
+
+
+// *********************** optimal solution O(n) *****************************
+
+class Solution2{
+    public:
+    
+ 
+    //Function to check whether a binary tree is balanced or not.
+    pair<bool,int> isBalancedFast(Node *root)
+    {
+        // base case
+        
+        if(root == NULL){
+            return {true,0};
+        }
+        
+        pair<bool,int> left = isBalancedFast(root->left);
+        pair<bool,int> right = isBalancedFast(root->right);
+        
+        
+        bool leftAns = left.first;
+        bool rightAns = right.first;
+        
+        bool diff = abs( left.second - right.second )<= 1;
+        
+        
+        pair<bool,int> ans;
+        ans.second = max(left.second,right.second) +1;
+        
+        
+        if(leftAns && rightAns && diff){
+            ans.first = true;
+        }
+        else{
+            ans.first = false;
+        }
+        
+        return ans;
+    }
+    
+    
+    bool isBalanced(Node *root)
+    {
+        // base case
+        
+      return isBalancedFast(root).first;
+    }
+};
 
 //{ Driver Code Starts.
 
